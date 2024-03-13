@@ -152,7 +152,119 @@ switch($bmi)
 // echo bmi(50, 1.80);
 
 
+//* if black true return black else white, if white....
+    // function whose_move(string $last_player, bool $win): string {
+      // if ($win) {
+      //   return $last_player;
+      // } else {
+      //     return $last_player === 'black' ? 'white' : 'black';
+      // }
 
-function finalGrade($exam, $projects) {
+      // return $win ? $last_player : ($last_player == 'black' ? 'white' : 'black');
 
-}
+      // return $win ? $last_player : ['black' => 'white', 'white' => 'black'][$last_player];
+
+      // $players = ["black", "white"];
+      // return $win ? $player : array_reverse($players)[array_search($player, $players)];
+
+    // }
+
+    // echo whose_move("black", false) . "\n"; //white
+    // echo whose_move("black", true) . "\n"; //blak
+    // echo whose_move("white", true) . "\n"; //wh
+    // echo whose_move("white", false) . "\n"; //bl
+
+
+
+  //* replace
+  //   function replace_dots(string $str): string {
+
+  //     return str_replace('.', '-', $str);
+
+  //     return strtr($str, '.', '-');
+
+  //     return str_ireplace(".","-",$str);
+
+  //     return join("-",explode('.',$s));
+
+  //     return preg_replace('/[.]/', '-', $str);
+
+  //     $str = explode(".",$str);
+  //     return implode('-',$str);
+
+
+  //     $st = str_split($str);
+  //     $r = '';
+      
+  //     foreach($st as $s) {
+  //       if ($s == '.') {
+  //         $r = $r . '-';
+  //       }
+  //       else {
+  //         $r = $r . $s;
+  //       }
+  //     }
+      
+
+  //   }
+
+  //  echo replace_dots('one.two.three') . PHP_EOL;//one-two-three
+
+  //* return branching with assotiation array 
+  // function people_with_age_drink(int $old): string {
+
+    // $categories = array(
+    //   'drink toddy' => range(0,13),
+    //   'drink coke' => range(14,17),
+    //   'drink beer' => range(18,20),
+    // );
+
+    // $ageCategories = [21 => "drink whisky",20 => "drink beer",17 => "drink coke",13 => "drink toddy"];
+    
+    // foreach ($ageCategories as $age => $drink) {
+    //   if ($old >= $age) {
+    //       return $drink;
+    //   }
+    // }  
+    // return "drink toddy";
+
+  // }
+  // echo people_with_age_drink(12) . PHP_EOL;//toddy
+  // echo people_with_age_drink(22) . PHP_EOL;//whisky
+  // echo people_with_age_drink(25) . PHP_EOL;//whisky
+  // echo people_with_age_drink(18) . PHP_EOL;//beer
+
+
+  //* return drink about brand name ASSOSIATION ARRAY
+  // function get_drink_by_profession(string $s): string {
+    // $drinks = ["Jabroni" => "Patron Tequila",
+    // "School Counselor"  => 	"Anything with Alcohol",
+    // "Programmer" =>	"Hipster Craft Beer",
+    // "Bike Gang Member"  => 	"Moonshine",
+    // "Politician" => 	"Your tax dollars",
+    // "Rapper"  => 	"Cristal"];
+
+    // $s = mb_strtolower($s);
+
+    // foreach($drinks as $brand => $drink){
+    //   $brandLower = mb_strtolower($brand);
+      
+    //    if(ucfirst($s) == ucfirst($brandLower)){
+    //       return $drink;
+    //   }
+    // }
+    // return "Beer";
+
+
+      // return [ 
+      // "jabroni" =>"Patron Tequila",
+      // "school counselor"=>"Anything with Alcohol",  
+      // "programmer"=>"Hipster Craft Beer",
+      // "bike gang member"=>"Moonshine",
+      // "politician"=>"Your tax dollars",
+      // "rapper"=>"Cristal"
+      // ][strtolower($s)]??"Beer";
+    
+  // }
+  // echo get_drink_by_profession("jabrOni") . PHP_EOL; //Patron Tequila
+  // echo get_drink_by_profession("scHOOl counselor") . PHP_EOL; //Patron Tequila
